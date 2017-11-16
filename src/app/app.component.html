@@ -1,0 +1,7 @@
+<canvas style="position: absolute; top: 7px;" #canvas [width]="options.width" [height]="options.height"></canvas>
+
+<ack-webcam [(ref)]="webcam" [options]="options" (success)="onCamSuccess($event)" (catch)="onCamError($event)"></ack-webcam>
+<button (click)="toggle()"> 
+<span *ngIf="stopped">Resume</span>
+<span *ngIf="!stopped">Stop</span>
+</button>
