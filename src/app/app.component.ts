@@ -13,9 +13,9 @@ import { Emotion } from './model/emotion';
 })
 export class AppComponent implements OnInit, OnDestroy {
   subscriptionKey: string = "<<your subscription key>>";
+  // url: e.g. https://westeurope.api.cognitive.microsoft.com/face/v1.0
   url: string = "<<your face api url>>";
-  
-  requestParams: string = "?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,emotion";
+  requestParams: string = "/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,emotion";
   captureInterval: number = 3000; //time in ms to wait between requests; keep in mind that the free face api has limitations for requests/min
 
   stopped: boolean = true;
